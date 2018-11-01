@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Add template file for the social buttons.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_theme().
+ *
+ * Defines template files for the social sharing buttons module.
+ */
+function brafton_social_sharing_theme($existing, $type, $theme, $path) {
+  return [
+    'brafton-social-sharing' => [
+      'variables' => ['items' => ''],
+    ],
+  ];
+}

@@ -1,0 +1,20 @@
+.social-sharing-buttons {
+    display: flex;
+    align-items: center;
+}
+.social-sharing-buttons a {
+    margin-right: 1em;
+}
+.social-sharing-buttons a:last-child {
+    margin-right: 0;
+}
+a.social-sharing-buttons__button {
+    overflow: hidden;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+}
+a.social-sharing-buttons__button svg {
+    width: 30px;
+    height: 30px;
+}

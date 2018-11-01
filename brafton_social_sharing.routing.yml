@@ -1,0 +1,7 @@
+brafton_social_sharing.content:
+  path: '/brafton-social'
+  defaults:
+    _controller: '\Drupal\brafton_social_sharing\Controller\HelloController::content'
+    _title: 'Brafton Social Sharing'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,5 @@
+social-sharing:
+  version: 1.x
+  css:
+    theme:
+      css/social-icons.css: {}

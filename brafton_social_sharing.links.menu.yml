@@ -1,0 +1,6 @@
+brafton_social_sharing.admin:
+  title: 'Brafton social sharing module settings'
+  description: 'Settings for the Brafton social sharing module'
+  parent: system.admin_config_development
+  route_name: brafton_social_sharing.content
+  weight: 100
