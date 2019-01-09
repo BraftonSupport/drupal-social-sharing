@@ -67,43 +67,55 @@ class HelloBlock extends BlockBase implements BlockPluginInterface {
     $form = parent::blockForm($form, $form_state);
 
     $config = $this->getConfiguration();
+    $defaults = $this->getConfiguration('brafton_social_sharing.settings');
 
     $form['facebook_url'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Facebook'),
       //'#description' => $this->t('Link to Facebook page'),
-      '#default_value' => isset($config['facebook_url']) ? $config['facebook_url'] : '',
+      '#default_value' => $this->getConfiguration('brafton_social_sharing.facebook_url'),
     ];
 
     $form['twitter_url'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Twitter'),
       //'#description' => $this->t('Link to Twitter page'),
-      '#default_value' => isset($config['twitter_url']) ? $config['twitter_url'] : '',
+      '#default_value' => 1,
     ];
 
     $form['google_url'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Google +'),
       //'#description' => $this->t('Link to Google + page'),
-      '#default_value' => isset($config['google_url']) ? $config['google_url'] : '',
+      '#default_value' => 1,
     ];
 
     $form['li_url'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('LinkedIn'),
       //'#description' => $this->t('Link to LinkedIn page'),
-      '#default_value' => isset($config['li_url']) ? $config['li_url'] : '',
+      '#default_value' => 1,
     ];
 
     $form['pin_url'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Pinterest'),
       //'#description' => $this->t('Link to Pinterest page'),
-      '#default_value' => isset($config['pin_url']) ? $config['pin_url'] : '',
+      '#default_value' => 1,
     ];
 
     return $form;
+  }
+
+  /*public function defaultConfiguration() {
+    $default_config = \Drupal::config('brafton_social_sharing.settings');
+    return [
+      'facebook_url' => $default_config->get('social-sharing.facebook_url'),
+      'twitter_url' => $default_config->get('social-sharing.twitter_url'),
+      'google_url' => $default_config->get('social-sharing.google_url'),
+      'li_url' => $default_config->get('social-sharing.li_url'),
+      'pin_url' => $default_config->get('social-sharing.pin_url'),
+    ];
   }
 
   /**

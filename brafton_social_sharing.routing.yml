@@ -1,7 +1,7 @@
-brafton_social_sharing.content:
-  path: '/brafton-social'
+brafton_social_sharing.settings:
+  path: '/admin/config/brafton-social'
   defaults:
-    _controller: '\Drupal\brafton_social_sharing\Controller\HelloController::content'
-    _title: 'Brafton Social Sharing'
+    _form: '\Drupal\brafton_social_sharing\Form\ModuleConfigurationForm'
+    _title: 'Brafton Social Sharing config'
   requirements:
-    _permission: 'access content'
+    _permission: 'administer site configuration'

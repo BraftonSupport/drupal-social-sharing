@@ -1,7 +1,7 @@
 name: Brafton Social Sharing Module
 description: A block for social sharing icons.
 package: Custom
-configure: brafton_social_sharing.admin
+configure: brafton_social_sharing.settings
 type: module
 version: 1.0
 core: 8.x

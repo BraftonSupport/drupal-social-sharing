@@ -1,0 +1,17 @@
+brafton_social_sharing.settings:
+  type: config_object
+  label: 'Brafton social sharing settings'
+  mapping:
+    items:
+      type: mapping
+      mapping:
+        facebook_url:
+          type: boolean
+        twitter_url:
+          type: boolean
+        google_url:
+          type: boolean
+        li_url:
+          type: boolean
+        pin_url:
+          type: boolean
